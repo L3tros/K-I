@@ -470,6 +470,12 @@ main {
     z-index: 60;
   }
 }
+.section-block2 {
+    max-width: 528px; /* Deine gewünschte Breite */
+    width: 100%;      /* Sorgt dafür, dass es auf kleinen Bildschirmen mitskaliert */
+    height: auto;     /* Verhindert Verzerrungen */
+    display: block;   /* Verhindert kleine Abstände unter dem Bild */
+}
 
 /* ===== MOBILE ===== */
 
