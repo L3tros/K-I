@@ -396,22 +396,7 @@ main {
   margin-bottom: 6px;
   font-size: 14px;
 }
-.section-block2 {
-    /* Begrenzt die physische Breite im Browser */
-    max-width: 600px; 
-    width: 100%;
-    
-    /* Behebt das Problem, dass es "zu hoch" wirkt */
-    height: auto; 
-    
-    /* Sorgt dafür, dass es im Grid sauber sitzt */
-    display: block;
-    margin: 0 auto;
-    
-    /* Optional: Ein leichter Rahmen, damit es sich vom Hintergrund abhebt */
-    border: 1px solid var(--line);
-    border-radius: 12px;
-}
+
 @media (max-width: 960px) {
   .alt-block {
     grid-template-columns: 1fr;
@@ -484,6 +469,15 @@ main {
     display: flex;
     z-index: 60;
   }
+}
+.section-block2 {
+    width: 100%;       /* Nutzt den vollen Platz der (jetzt größeren) Grid-Spalte */
+    max-width: 850px;  /* Ein großzügigeres Limit für extrem breite Screens */
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    object-fit: contain;
 }
 
 
