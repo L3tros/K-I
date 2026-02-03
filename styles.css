@@ -397,12 +397,21 @@ main {
   font-size: 14px;
 }
 .section-block2 {
-    max-width: 528px; /* Deine gewünschte Breite */
-    width: 100%;      /* Sorgt dafür, dass es auf kleinen Bildschirmen mitskaliert */
-    height: auto;     /* Verhindert Verzerrungen */
-    display: block;   /* Verhindert kleine Abstände unter dem Bild */
+    /* Begrenzt die physische Breite im Browser */
+    max-width: 600px; 
+    width: 100%;
+    
+    /* Behebt das Problem, dass es "zu hoch" wirkt */
+    height: auto; 
+    
+    /* Sorgt dafür, dass es im Grid sauber sitzt */
+    display: block;
+    margin: 0 auto;
+    
+    /* Optional: Ein leichter Rahmen, damit es sich vom Hintergrund abhebt */
+    border: 1px solid var(--line);
+    border-radius: 12px;
 }
-
 @media (max-width: 960px) {
   .alt-block {
     grid-template-columns: 1fr;
