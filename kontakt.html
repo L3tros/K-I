@@ -79,7 +79,9 @@
 
         if (!btn || !wrap || !link) return;
 
-        const mail = 'info@ki-mediaservice.de';
+        const user = 'info';
+const domain = 'ki-media' + 'service.de';
+const mail = user + '@' + domain;
         let visible = false;
 
         btn.addEventListener('click', function () {
